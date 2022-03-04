@@ -3,9 +3,14 @@
 Source:
     - https://www.slavevoyages.org/documents/download/AfricanNamesDatabase.csv
 """
+import sys
+from pathlib import Path
 
 import pandas as pd
 
+sys.path.append(str(Path(__file__).parent.parent))
+
+import utils as ut  # noqa
 
 url = "https://www.slavevoyages.org/documents/download/AfricanNamesDatabase.csv"
 names_df = pd.read_csv(url, sep=",", skipfooter=1, engine="python")
@@ -18,28 +23,7 @@ names_df = names_df[list(colnames_dict.keys())]
 names_df.rename(columns=colnames_dict, inplace=True)
 
 
-def remap_gender(gender: str) -> str:
-    """Map gender to standard notation.
-
-    Args:
-        gender (str): Original gender, eg male, girl, etc
-
-    Returns:
-        str: m, f or other
-    """
-    if not isinstance(gender, str):
-        return "other"
-
-    gender = gender.strip().lower()
-    if gender in ["man", "male", "boy"]:
-        return "m"
-    elif gender in ["woman", "female", "girl"]:
-        return "f"
-    else:
-        return "other"
-
-
-names_df["gender"] = names_df["gender"].apply(remap_gender)
+names_df["gender"] = names_df["gender"].apply(ut.remap_gender)
 
 
 # Save
