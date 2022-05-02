@@ -1,4 +1,4 @@
-"""CMU Artificial Intelligence Repository Names
+"""CMU Artificial Intelligence Repository Names.
 
 Source:
     - https://www.cs.cmu.edu/Groups/AI/util/areas/nlp/corpora/names/0.html

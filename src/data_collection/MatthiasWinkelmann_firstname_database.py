@@ -12,7 +12,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 import utils as ut  # noqa
 
-names_url = "https://raw.githubusercontent.com/MatthiasWinkelmann/firstname-database/master/firstnames.csv"
+names_url = "https://raw.githubusercontent.com/MatthiasWinkelmann/firstname-database/master/firstnames.csv"  # noqa
 names_df = pd.read_csv(names_url, sep=";")
 
 # Original format is wide, with a column for each country. Normalise
@@ -38,5 +38,3 @@ names_df.to_csv(
     index=False,
     encoding="utf-8",
 )
-
-# %%

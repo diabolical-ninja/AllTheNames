@@ -21,7 +21,7 @@ def build_data_sources() -> None:
         try:
             os.system(f"python {location}/{source_generator}")
 
-        except:
+        except:  # noqa
             print(f"FAILED: {source_generator}")
 
 

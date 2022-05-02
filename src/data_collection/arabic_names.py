@@ -13,10 +13,10 @@ sys.path.append(str(Path(__file__).parent.parent))
 import utils as ut  # noqa
 
 # Source names & combine into a single DF
-female_names_url = "https://raw.githubusercontent.com/zakahmad/ArabicNameGenderFinder/master/females_en.csv"
+female_names_url = "https://raw.githubusercontent.com/zakahmad/ArabicNameGenderFinder/master/females_en.csv"  # noqa
 female_names_df = pd.read_csv(female_names_url)
 
-male_names_url = "https://raw.githubusercontent.com/zakahmad/ArabicNameGenderFinder/master/males_en.csv"
+male_names_url = "https://raw.githubusercontent.com/zakahmad/ArabicNameGenderFinder/master/males_en.csv"  # noqa
 male_names_df = pd.read_csv(male_names_url)
 
 names_df = pd.concat([female_names_df, male_names_df])

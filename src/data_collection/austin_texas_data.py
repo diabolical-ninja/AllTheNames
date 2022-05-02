@@ -1,8 +1,8 @@
-"""Names Datasets from data.austintext.gov
+"""Names Datasets from data.austintext.gov .
 
 Sources:
-    - https://data.austintexas.gov/Health-and-Community-Services/From-Aadhav-to-Zyva-6-087-Names-of-Babies-Born-in-/rmd7-g4yz
-    - https://data.austintexas.gov/Health-and-Community-Services/Most-Popular-Baby-Names-2008-2017-City-Of-Austin/53bh-5yzd
+ # noqa  - https://data.austintexas.gov/Health-and-Community-Services/From-Aadhav-to-Zyva-6-087-Names-of-Babies-Born-in-/rmd7-g4yz  #noqa
+ # noqa  - https://data.austintexas.gov/Health-and-Community-Services/Most-Popular-Baby-Names-2008-2017-City-Of-Austin/53bh-5yzd  #noqa
 """
 import sys
 from pathlib import Path
