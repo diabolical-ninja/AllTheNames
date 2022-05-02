@@ -14,9 +14,9 @@ def remap_gender(gender: str) -> str:
         return "other"
 
     gender = gender.strip().lower()
-    if gender in ["man", "male", "boy", "b"]:
+    if gender in ["man", "male", "boy", "b", "m", "1m"]:
         return "m"
-    elif gender in ["woman", "female", "girl", "g"]:
+    elif gender in ["woman", "female", "girl", "g", "f", "1f"]:
         return "f"
     else:
         return "other"
