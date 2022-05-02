@@ -22,7 +22,7 @@ names_df = pd.concat([males_df, females_df])
 
 # The files start with a header explaining the T&C's of usage
 # They're identified with the # symbol
-names_df = names_df[~names_df["name"].str.startswith("#")]
+names_df = names_df[~names_df["first_name"].str.startswith("#")]
 
 # Fill out the schema
 names_df["origin"] = pd.NA
