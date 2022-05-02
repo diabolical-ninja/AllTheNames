@@ -1,4 +1,4 @@
-"""Top Names from 1880-2018 from SSB (Statistics Norway)
+"""Top Names from 1880-2018 from SSB (Statistics Norway).
 
 Source:
     - https://www.ssb.no/en/befolkning/navn/statistikk/navn

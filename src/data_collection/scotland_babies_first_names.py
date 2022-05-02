@@ -1,10 +1,8 @@
 """Scotland - Babies First Names.
 
 Source:
-    - https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/babies-first-names-summary-records-comma-separated-value-csv-format
+ # noqa  - https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/babies-first-names-summary-records-comma-separated-value-csv-format
 """
-#%%
-
 import sys
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -16,7 +14,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 import utils as ut  # noqa
 
 # Trick site into thinking it's a browser
-url = "https://www.nrscotland.gov.uk/files//statistics/babies-names/20/babies-first-names-all-names-all-years.csv"
+url = "https://www.nrscotland.gov.uk/files//statistics/babies-names/20/babies-first-names-all-names-all-years.csv"  # noqa
 req = Request(url)
 req.add_header(
     "User-Agent",

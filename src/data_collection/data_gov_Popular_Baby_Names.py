@@ -10,7 +10,7 @@ import pandas as pd
 import requests
 
 # Open zip into memory
-names_url = "https://data.sa.gov.au/data/dataset/9849aa7f-e316-426e-8ab5-74658a62c7e6/resource/534d13f2-237c-4448-a6a3-93c07b1bb614/download/baby-names-1944-2013.zip"
+names_url = "https://data.sa.gov.au/data/dataset/9849aa7f-e316-426e-8ab5-74658a62c7e6/resource/534d13f2-237c-4448-a6a3-93c07b1bb614/download/baby-names-1944-2013.zip"  # noqa
 content = requests.get(names_url)
 zf = ZipFile(BytesIO(content.content))
 

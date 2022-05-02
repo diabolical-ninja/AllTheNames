@@ -1,4 +1,4 @@
-"""List of Names Dataset
+"""List of Names Dataset.
 
 Source:
     - https://www.back4app.com/database/back4app/list-of-names-dataset
@@ -16,8 +16,8 @@ import utils as ut  # noqa
 
 url = "https://parseapi.back4app.com/classes/Complete_List_Names?limit=1000000"
 headers = {
-    "X-Parse-Application-Id": "zsSkPsDYTc2hmphLjjs9hz2Q3EXmnSxUyXnouj1I",  # This is the fake app's application id
-    "X-Parse-Master-Key": "4LuCXgPPXXO2sU5cXm6WwpwzaKyZpo3Wpj4G4xXK",  # This is the fake app's readonly master key
+    "X-Parse-Application-Id": "zsSkPsDYTc2hmphLjjs9hz2Q3EXmnSxUyXnouj1I",  # noqa  # This is the fake app's application id
+    "X-Parse-Master-Key": "4LuCXgPPXXO2sU5cXm6WwpwzaKyZpo3Wpj4G4xXK",  # noqa  # This is the fake app's readonly master key
 }
 names = json.loads(
     requests.get(url, headers=headers).content.decode("utf-8")
