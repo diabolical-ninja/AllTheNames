@@ -38,7 +38,6 @@ names_df.drop(columns="count", inplace=True)
 # Restructure into the required format
 names_df["gender"] = names_df["gender"].apply(ut.remap_gender)
 names_df["origin"] = "united states of america"
-names_df["definition"] = pd.NA
 
 # Save
 names_df.to_csv("data/ssa_national_names.csv", sep="|", index=False, encoding="utf-8")

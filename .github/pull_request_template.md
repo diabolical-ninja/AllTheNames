@@ -8,6 +8,7 @@
 Please ensure the following items are complete for all PR's:
 
 - [ ] All CI (`nox`) is passing
+- [ ] Documentation appropriately updated
 - [ ] Outputted data file:
     - [ ] outputs to `./data`
     - [ ] Matches the required schema

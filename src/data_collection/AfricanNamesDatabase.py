@@ -27,5 +27,4 @@ names_df["gender"] = names_df["gender"].apply(ut.remap_gender)
 
 
 # Save
-names_df["definition"] = pd.NA
 names_df.to_csv("data/AfricanNamesDatabase.csv", sep="|", index=False, encoding="utf-8")

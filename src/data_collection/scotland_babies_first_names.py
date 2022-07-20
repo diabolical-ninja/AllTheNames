@@ -35,7 +35,6 @@ names_df.rename(columns=colnames_dict, inplace=True)
 # Restructure into the required format
 names_df["gender"] = names_df["gender"].apply(ut.remap_gender)
 names_df["origin"] = "scotland"
-names_df["definition"] = pd.NA
 
 # Save
 names_df.to_csv(

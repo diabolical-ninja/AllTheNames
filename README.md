@@ -1,37 +1,70 @@
 # All The Names
 
- [![](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/) ![t](https://img.shields.io/badge/status-maintained-yellow.svg) [![Code Hygiene](https://github.com/diabolical-ninja/AllTheNames/actions/workflows/pipeline.yml/badge.svg)](https://github.com/diabolical-ninja/AllTheNames/actions/workflows/pipeline.yml)
+[![Code Hygiene](https://github.com/diabolical-ninja/AllTheNames/actions/workflows/pipeline.yml/badge.svg)](https://github.com/diabolical-ninja/AllTheNames/actions/workflows/pipeline.yml)
+<br/>
+
+[![](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+![t](https://img.shields.io/badge/status-maintained-yellow.svg)
+![black codestyle](https://img.shields.io/badge/Code%20Style-Black-black)
+<br/>
 
 
-Dataset of people names.
+Collection of various names datasets.
 
 
-### Data Structure
-Found in `all_names.csv`
+## The Data
+
+There are currently 15 sources which produces:
+
+| Item     | Count |
+|----------------|------------|
+| Total Rows     | 14,607,135 |
+| Unique Names   | 289,755    |
+| Unique Origins | 623        |
+
+
+There is no guarantee of the accuracy of the data, ie the associated gender & origin, as it will vary (significantly) source to source. 
+
+To use the data you can read it straight from github into `pandas`:
+```python
+import pandas as pd
+
+names_df = pd.read_csv("https://raw.githubusercontent.com/diabolical-ninja/AllTheNames/main/names.csv", sep = "|")
+```
+
+### Structure
+Found in `names.csv`
 
 | Field 	| Type 	| Description 	|
 |---	|---	|---	|
 | First Name 	| String 	| First Name, noting some first names may be longer than 1 word	|
 | Origin 	| String 	| Country or race of origin. If multiple countries/races are available they should be represented as new lines 	|
 | Gender 	| String 	| *If available.*  Defined as `F`, `M`, `Other` or `NULL` |
-| Definition 	| String 	| *If available.* Historical meaning of the name 	|
+
 
 
 ## How To Run
 
-You can generate a dataset of interest from the command line via:
+This project uses [poetry](https://python-poetry.org/) for dependency management. This assumes `python 3.9+`. It may well work for lower versions but has not been tested.
+
+First setup the environment by running:
 ```bash
-python src/data_collection/<generation_script_run>.py
+poetry install
 ```
 
-To build it all (source all files & merge), run:
+You can then generate a dataset of interest from the command line via:
 ```bash
-python all_the_names.py
+poetry run python src/data_collection/<generation_script_run>.py
+```
+
+To build all sources, run:
+```bash
+poetry run python all_the_names.py
 ```
 
 You should see a file `names.csv` appear in the root directory.
 
-This process will depend on your network speed but on my 2014 MBP & 50Mbps internet connection it takes roughly 2min & 50sec
+This process will depend on your network speed but on my 2021 MBP & 50Mbps internet connection it takes roughly 2min & 10sec
 
 ## Contributions
 
@@ -40,3 +73,9 @@ Contributions are absolutely welcomed and encouraged. To do so, raise a PR with 
 Ideas:
 - Some datasets have a "frequency" measure of sorts. It would be cool to include that & have a mechanism to standardise/normalise the value across all datasets
 - Standardise `origin` so that difference sources better match. Eg USA, United States of America, US of A, etc are all consistently presented as the same location
+
+
+## Issues
+
+If you encounter any problems,
+please [file an issue](https://github.com/diabolical-ninja/nbn/issues) along with a detailed description.

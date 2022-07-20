@@ -24,7 +24,7 @@ def lint(session: Session) -> None:
         "flake8-bandit",
     )
     session.run("flake8", "src/")
-    session.run("flake8", "all_the_names.py")
+    session.run("flake8", "./all_the_names.py")
 
 
 @session(python=PYTHON_VERSION)
