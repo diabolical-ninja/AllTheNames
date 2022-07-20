@@ -38,7 +38,7 @@ Found in `names.csv`
 | Field 	| Type 	| Description 	|
 |---	|---	|---	|
 | First Name 	| String 	| First Name, noting some first names may be longer than 1 word	|
-| Origin 	| String 	| Country or race of origin. If multiple countries/races are available they should be represented as new lines 	|
+| Origin 	| String 	| Country, classification or race of origin. If multiple countries/classification/races are available they should be represented as new lines 	|
 | Gender 	| String 	| *If available.*  Defined as `F`, `M`, `Other` or `NULL` |
 
 
