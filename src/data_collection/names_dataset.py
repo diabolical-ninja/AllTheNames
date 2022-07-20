@@ -32,7 +32,6 @@ names_df.rename(columns=colnames_dict, inplace=True)
 
 names_df["gender"] = names_df["gender"].apply(ut.remap_gender)
 names_df["origin"] = pd.NA
-names_df["definition"] = pd.NA
 
 
 # Save

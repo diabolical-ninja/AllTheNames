@@ -23,7 +23,6 @@ names_df = pd.concat([female_names_df, male_names_df])
 
 # Restructure into the required format
 names_df["origin"] = "sweden"
-names_df["definition"] = pd.NA
 
 # Save
 names_df.to_csv(

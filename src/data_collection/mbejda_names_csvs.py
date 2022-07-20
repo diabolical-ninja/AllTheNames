@@ -45,8 +45,6 @@ for url in urls:
 # Combine all
 names_df = pd.concat(names_dfs)
 
-# Restructure into the required format
-names_df["definition"] = pd.NA
 
 # Save
 names_df.to_csv("data/mbejda_names.csv", sep="|", index=False, encoding="utf-8")

@@ -19,7 +19,6 @@ names_df = pd.read_csv(url, header=None, names=["first_name", "gender"])
 # Restructure into the required format
 names_df["gender"] = names_df["gender"].apply(ut.remap_gender)
 names_df["origin"] = pd.NA
-names_df["definition"] = pd.NA
 
 
 # Save

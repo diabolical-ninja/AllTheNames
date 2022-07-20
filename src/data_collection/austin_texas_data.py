@@ -28,7 +28,7 @@ baby_names_2008_2017_df = pd.read_csv(
 
 baby_names_2008_2017_df = baby_names_2008_2017_df.melt(id_vars=["year", "rank"])
 
-colnames_dict = {"variable": "gender", "value": "name"}
+colnames_dict = {"variable": "gender", "value": "first_name"}
 
 baby_names_2008_2017_df = baby_names_2008_2017_df[list(colnames_dict.keys())]
 baby_names_2008_2017_df.rename(columns=colnames_dict, inplace=True)
@@ -39,7 +39,6 @@ names_df = pd.concat([baby_names_2017_df, baby_names_2008_2017_df])
 
 names_df["gender"] = names_df["gender"].apply(ut.remap_gender)
 names_df["origin"] = "USA"
-names_df["definition"] = pd.NA
 
 
 # Save

@@ -33,7 +33,6 @@ names_df.rename(columns=colnames_dict, inplace=True)
 
 # Restructure into the required format
 names_df["origin"] = "australia"
-names_df["definition"] = pd.NA
 
 # Save
 names_df.to_csv("data/popular_baby_names.csv", sep="|", index=False, encoding="utf-8")

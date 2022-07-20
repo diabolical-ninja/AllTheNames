@@ -26,7 +26,6 @@ names_df = names_df[~names_df["first_name"].str.startswith("#")]
 
 # Fill out the schema
 names_df["origin"] = pd.NA
-names_df["definition"] = pd.NA
 
 
 # Save
